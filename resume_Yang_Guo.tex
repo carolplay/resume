@@ -3,9 +3,9 @@
 % Article complet : http://blog.madrzejewski.com/creer-cv-elegant-latex-moderncv/
 
 \documentclass[12pt,a4paper]{moderncv}
-\moderncvtheme[purple]{classic}                
+\moderncvtheme[black]{classic}                
 \usepackage[utf8]{inputenc}
-\usepackage[top=2.2cm, bottom=1.2cm, left=2cm, right=2cm]{geometry}
+\usepackage[top=2.0cm, bottom=1.2cm, left=2cm, right=2cm]{geometry}
 % Largeur de la colonne pour les dates
 \setlength{\hintscolumnwidth}{2.2cm}
 
@@ -18,53 +18,64 @@
 \begin{document}
 \maketitle
 
-\vspace{0cm}
+\newenvironment{myitemize}
+{ \begin{itemize}
+    \setlength{\itemsep}{3pt}
+    \setlength{\parskip}{1pt}
+    \setlength{\parsep}{0pt}     }
+{ \end{itemize}                  } 
+
+
+\vspace{-0.2cm}
 
 \section{Experience}
 
-\cventry{09/2014\\-- Today}{Société Générale CIB}{Software Engineer}{\newline Global Forex Derivatives Booking \& Deal Processing System}{Paris, France}{
+\cventry[0.1em]{09/2014\\-- Today}{Société Générale CIB}{Software Engineer}{\newline Global Forex Derivatives Booking \& Deal Processing System}{Paris, France}{
 \textbf{Java, Spring, Hibernate, Swing, JDBC, Sybase, C\#.Net, WinForm, Oracle, Groovy, }
 \textbf{Jira, SVN, Git, Nexus, Maven, Jenkins, Linux}
-\begin{itemize}
+\vspace{+0.1cm}
+\begin{myitemize}
 	\item System analysis, conception, implementation and test of developments.
 	\item System maintenance, production support, on duty call. Release management.
 	\item Major Projects:
-	\begin{itemize}
-	\item Integration of new exotic products (payoff and event implementation)
-	\item Yearly pnl sell-down execution on forex derivatives
-	\item System deployment for Korea entity (booking and compliance)
-	\item Modernize and migrate team toolchain to company-wide platform
-	\end{itemize}
-\end{itemize}
+	\begin{myitemize}
+		\item Integration of new exotic products (payoff and event implementation)
+		\item Yearly pnl sell-down execution on forex derivatives
+		\item System deployment for Korea entity (booking and compliance)
+		\item Modernize and migrate team toolchain to company-wide platform
+	\end{myitemize}
+\end{myitemize}
 }
 
-\cventry{05/2013\\-- 09/2013}{Electricite de France (EDF) R\&D}{Research Intern}{\newline Integration of Smart Grid models in Simulation Platform}{Paris, France}{
+\vspace{+0.3cm}
+
+\cventry[0.1em]{05/2013\\-- 09/2013}{Electricite de France (EDF) R\&D}{Research Intern}{\newline Integration of Smart Grid models in Simulation Platform}{Paris, France}{
 \textbf{Python, C++, Scientific Computing, SmartGrid}
-\begin{itemize}
-	\item  Development of a importation and visualization tool for legacy power grid models.
-	\item  Integration of new numerical solvers into platform. POC on industrial models.
-	%\newline
-\end{itemize}
+\vspace{+0.1cm}
+\begin{myitemize}
+	\item Development of a importation and visualization tool for legacy power grid models.
+	\item Integration of new numerical solvers into platform. POC on industrial models.
+\end{myitemize}
 }
 
-\vspace{+0.5cm}
+\vspace{+0.3cm}
 
-\cventry{07/2012\\-- 08/2012}{Baidu Mobile Cloud Ecosystem}{Quality Engineering Intern}{\newline Test automation for Android applications}{Beijing, China}{
+\cventry[0.1em]{07/2012\\-- 08/2012}{Baidu Mobile Cloud Ecosystem}{Quality Engineering Intern}{\newline Test automation for Android applications}{Beijing, China}{
 \textbf{Python, Android, Mobile, Test Automation, Quality Engineering}
-\begin{itemize}
+\vspace{+0.1cm}
+\begin{myitemize}
 	\item Worked inside the QE team of Baidu App Store, participated in routine operations in App Review process. Maintained and deployed automated test platform.
 	\item Enhanced filter and scanning module on Android ad SDK.
-	%\newline
-\end{itemize}
+\end{myitemize}
 }
 
-\vspace{+0.5cm}
+\vspace{+0.4cm}
 
 \section{Education}
 \cventry{2012 -- 2014}{Master of Science}{Georgia Institute of Technology}{Atlanta, US}{}{Major: Computer Engineering}
 \cventry{2010 -- 2013}{Master of Engineering}{Ecole Supérieure d'Electricité \textit{(Supélec)}}{France}{}{Machine Learning \& Robotics}
 
-\vspace{+0.5cm}
+\vspace{+0.4cm}
 
 %\cventry{}{}{}{}{}{
 %\begin{itemize}
@@ -78,7 +89,7 @@
 \cvitem{Stack2}{C\#.Net, WinForm, VBA, C++}
 \cvitem{Stack*}{Sybase, Oracle, Git, Linux, Python, Django, \LaTeX}
 \cvitem{Finance}{Forex Derivatives, Deal Processing, Risk Analysis}
-\cvitem{\textit{Languages}}{\textit{Native in Chinese, Cantonese \hfill Fluent in French, English\textit{(TOEFL 101/110)} }}
+\cvitem{\textit{Languages}}{\textit{Native in Chinese, Cantonese           Fluent in French, English}}
 
 
 \end{document}
